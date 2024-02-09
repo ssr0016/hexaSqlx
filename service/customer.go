@@ -7,6 +7,6 @@ type CustomerResponse struct {
 }
 
 type CustomerService interface {
-	GetCustomers()
-	GetCustomer()
+	GetCustomers() ([]CustomerResponse, error)
+	GetCustomer(int) (*CustomerResponse, error)
 }
